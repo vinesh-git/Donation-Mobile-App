@@ -1,12 +1,13 @@
 import { View,Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import style from "../../assets/styles/globalStyles";
+import { horizontalScale } from "../../assets/styles/scaling";
 
 const Home = () => {
     return (
         <SafeAreaView style={[style.flex,style.backgroundWhite]}>
             <View>
-                <Text>Home Screen</Text>
+                <Text style={{margin : horizontalScale(50)}}>Home Screen</Text>
             </View>
         </SafeAreaView>
     )
