@@ -6,6 +6,8 @@ import { tabType } from '../../interface/tabType'
 import { horizontalScale } from '../../assets/styles/scaling'
 
 const Badge = ({title}:{title : string}) => {
+  console.log("title in badge",title);
+  
   const tabRef = useRef(null);
   const [width,setWidth] = useState(0);
   const paddingHorizontal = 10;

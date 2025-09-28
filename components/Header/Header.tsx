@@ -5,7 +5,7 @@ import { headerType } from '../../interface/headerType';
 import { getFontScale } from 'react-native-device-info';
 import { fontScale } from '../../assets/styles/scaling';
 
-const Header = ({title,type}:headerType) => {
+const Header = ({title,type,color,numberOfLine}:headerType) => {
     let styleToApply = styles.type1;
     switch(type){
         case 1:
@@ -24,7 +24,7 @@ const Header = ({title,type}:headerType) => {
     }
   return (
     <View>
-      <Text style={styleToApply}>{title}</Text>
+      <Text numberOfLines={numberOfLine} style={[styleToApply,color && {color : color}]}>{title}</Text>
     </View>
   )
 }

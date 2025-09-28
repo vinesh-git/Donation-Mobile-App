@@ -1,5 +1,7 @@
 
 export interface headerType {
     title:string,
-    type : number
+    type : number,
+    color ? : string,
+    numberOfLine ? : number
 }
