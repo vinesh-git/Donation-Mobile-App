@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import store, { persistor } from "../redux/store/store";
 import { PersistGate } from "redux-persist/integration/react";
 import SingleDonationItem from "../screens/DonationItem/SingleDonationItem";
+import Login from "../screens/Login/Login";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,7 +15,8 @@ const MainNavigation = () => {
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
             <NavigationContainer>
-                <Stack.Navigator screenOptions={{headerShown:false}}>
+                <Stack.Navigator initialRouteName={Routes.Login} screenOptions={{headerShown:false}}>
+                    <Stack.Screen name={Routes.Login} component={Login} />
                     <Stack.Screen name={Routes.Home} component={HomeScreen} />
                     <Stack.Screen name={Routes.DonationItem} component={SingleDonationItem} />
                 </Stack.Navigator>

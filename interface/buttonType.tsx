@@ -1,5 +1,5 @@
 export interface buttonType{
     title : string,
-    isDisable : boolean,
+    isDisable? : boolean,
     onPress? : ()=>void
 }
